@@ -193,6 +193,7 @@ dependencies {
 
     implementation(libs.car.core)
     "fullImplementation"(libs.car.projected)
+    androidTestImplementation(libs.snapshots)
 }
 
 // Disable to fix memory leak and be compatible with the configuration cache.
