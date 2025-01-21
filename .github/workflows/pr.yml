@@ -87,6 +87,8 @@ jobs:
         ./gradlew :common:assemble :app:assembleDebug :wear:assembleDebug :automotive:assembleDebug
     - name: Upload Emerge Size Analysis
       run: ./gradlew :app:emergeUploadFullDebugApk
+      env:
+          EMERGE_API_TOKEN: ${{ secrets.EMERGE_API_TOKEN }}
 
     - name: Check for missing/modified DB schemas after build
       run: |

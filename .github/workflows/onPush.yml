@@ -73,6 +73,8 @@ jobs:
           ./gradlew :common:assemble :app:assembleRelease :wear:assembleRelease :automotive:assembleRelease
       - name: Upload for Emerge Size Analysis
         run: ./gradlew :app:emergeUploadReleaseApk
+        env:
+            EMERGE_API_TOKEN: ${{ secrets.EMERGE_API_TOKEN }}
 
       - name: Archive Build
         uses: actions/upload-artifact@v4
