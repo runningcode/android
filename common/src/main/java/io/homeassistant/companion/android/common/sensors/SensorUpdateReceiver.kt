@@ -4,7 +4,6 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.BuildConfig
 
 @AndroidEntryPoint
 class SensorUpdateReceiver : SensorReceiverBase() {
@@ -21,7 +20,7 @@ class SensorUpdateReceiver : SensorReceiverBase() {
         get() = "SensorReceiver"
 
     override val currentAppVersion: String
-        get() = BuildConfig.VERSION_NAME
+        get() = "FOO"
 
     override val managers: List<SensorManager>
         get() = listOf(BluetoothSensorManager())

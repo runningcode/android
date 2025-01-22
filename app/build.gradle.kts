@@ -26,8 +26,8 @@ android {
         minSdk = libs.versions.androidSdk.min.get().toInt()
         targetSdk = libs.versions.androidSdk.target.get().toInt()
 
-        versionName = project.version.toString()
-        versionCode = System.getenv("VERSION_CODE")?.toIntOrNull() ?: 1
+//        versionName = project.version.toString()
+//        versionCode = System.getenv("VERSION_CODE")?.toIntOrNull() ?: 1
 
         manifestPlaceholders["sentryRelease"] = "$applicationId@$versionName"
         manifestPlaceholders["sentryDsn"] = System.getenv("SENTRY_DSN") ?: ""
@@ -114,6 +114,15 @@ android {
     lint {
         abortOnError = false
         disable += "MissingTranslation"
+    }
+}
+
+emerge {
+    vcs {
+        gitHub {
+            repoOwner = "runningcode"
+            repoName = "android"
+        }
     }
 }
 

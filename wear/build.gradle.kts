@@ -17,9 +17,9 @@ android {
         minSdk = libs.versions.androidSdk.wear.min.get().toInt()
         targetSdk = libs.versions.androidSdk.wear.target.get().toInt()
 
-        versionName = project.version.toString()
+//        versionName = project.version.toString()
         // We add 1 because the app and wear versions need to have different version codes.
-        versionCode = (System.getenv("VERSION_CODE")?.toIntOrNull() ?: 1) + 1
+//        versionCode = (System.getenv("VERSION_CODE")?.toIntOrNull() ?: 1) + 1
     }
 
     buildFeatures {
