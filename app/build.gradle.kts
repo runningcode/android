@@ -120,7 +120,8 @@ android {
 emerge {
     vcs {
         gitHub {
-//            repoName = "android"
+            repoOwner = "runningcode"
+            repoName = "android"
         }
     }
 }
