@@ -117,6 +117,14 @@ android {
     }
 }
 
+emerge {
+    vcs {
+        gitHub {
+            repoName = "android"
+        }
+    }
+}
+
 dependencies {
     implementation(project(":common"))
 
