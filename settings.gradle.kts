@@ -13,16 +13,16 @@ pluginManagement {
 
 plugins {
     // So we can't reach the libs.plugins.* aliases from here so we need to declare them the old way...
-    id("org.ajoberstar.reckon.settings").version("0.18.3")
+//    id("org.ajoberstar.reckon.settings").version("0.18.3")
 }
 
-reckon {
-    setDefaultInferredScope("patch")
-    stages("beta", "final")
-    setScopeCalc { java.util.Optional.of(org.ajoberstar.reckon.core.Scope.PATCH) }
-    setStageCalc(calcStageFromProp())
-    setTagWriter { it.toString() }
-}
+//reckon {
+//    setDefaultInferredScope("patch")
+//    stages("beta", "final")
+//    setScopeCalc { java.util.Optional.of(org.ajoberstar.reckon.core.Scope.PATCH) }
+//    setStageCalc(calcStageFromProp())
+//    setTagWriter { it.toString() }
+//}
 
 dependencyResolutionManagement {
     repositories {

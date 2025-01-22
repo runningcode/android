@@ -21,7 +21,7 @@ class SensorUpdateReceiver : SensorReceiverBase() {
         get() = "SensorReceiver"
 
     override val currentAppVersion: String
-        get() = BuildConfig.VERSION_NAME
+        get() = "FOO"
 
     override val managers: List<SensorManager>
         get() = listOf(BluetoothSensorManager())
