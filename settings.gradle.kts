@@ -16,13 +16,13 @@ plugins {
 //    id("org.ajoberstar.reckon.settings").version("0.18.3")
 }
 
-//reckon {
+// reckon {
 //    setDefaultInferredScope("patch")
 //    stages("beta", "final")
 //    setScopeCalc { java.util.Optional.of(org.ajoberstar.reckon.core.Scope.PATCH) }
 //    setStageCalc(calcStageFromProp())
 //    setTagWriter { it.toString() }
-//}
+// }
 
 dependencyResolutionManagement {
     repositories {

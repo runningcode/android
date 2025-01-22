@@ -4,7 +4,6 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.BuildConfig
 
 @AndroidEntryPoint
 class SensorUpdateReceiver : SensorReceiverBase() {

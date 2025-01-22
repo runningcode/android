@@ -84,13 +84,13 @@ jobs:
         cp .github/mock-google-services.json wear/google-services.json
         cp .github/mock-google-services.json automotive/google-services.json
 
-    - name: Build Debug APK
-      run: |
-        ./gradlew :common:assemble :app:assembleDebug :wear:assembleDebug :automotive:assembleDebug
-    - name: Upload Emerge Size Analysis
+    - name: Debug Snapshots Analysis
       run: ./gradlew :app:logExtension :app:emergeSnapshotsPreflightFullDebug
       env:
           EMERGE_API_TOKEN: ${{ secrets.EMERGE_API_TOKEN }}
+    - name: Build Debug APK
+      run: |
+        ./gradlew :common:assemble :app:assembleDebug :wear:assembleDebug :automotive:assembleDebug
     - name: Upload Emerge Size Analysis
       run: ./gradlew :app:emergeUploadFullDebugApk :app:emergeUploadSnapshotBundleFullDebug
       env:

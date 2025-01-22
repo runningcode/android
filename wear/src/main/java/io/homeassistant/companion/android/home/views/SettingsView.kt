@@ -257,7 +257,7 @@ fun SettingsView(
             }
             item {
                 Text(
-                    text = BuildConfig.VERSION_NAME
+                    text = "NO_NAME"
                 )
             }
         }
